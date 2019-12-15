@@ -51,7 +51,7 @@
       top: 120px;
       left: 355px;
       bottom: 120px;
-      
+
     }
     iframe{
 		opacity: 1;
@@ -208,7 +208,7 @@
       position: absolute;
       left: 42px;
       top: 22px;
-      
+
     }
     header h1 .icon{
       font-size: 47px;
@@ -411,10 +411,10 @@
     </a></h1>
     <%
 		date = new Date(_.now());
-		if(date.getMonth()+1<10){ month = '0' + (date.getMonth()+1);} 
+		if(date.getMonth()+1<10){ month = '0' + (date.getMonth()+1);}
 		else{ month = date.getMonth()+1; }
 
-		if(date.getDate()<10){ day = '0' + (date.getDate());} 
+		if(date.getDate()<10){ day = '0' + (date.getDate());}
 		else{ day = date.getDate(); }
     %>
     <div class="header__updated"><em><%= pages.ProjectTitle %></em> updated <%= day %>.<%= month %>.<%= date.getFullYear() %>, <%= pages.PageList.length %> pages</div>
@@ -449,7 +449,7 @@
                 <a href="<%= page.file %>" class="pagelist__url">
                   <svg class="icon icon-link"><use xlink:href="#icon-link"></use></svg>
                 </a>
-                
+
                 <div class="pagelist__progress">
                   <% if(!page.ready) page.ready = 0; %>
                   <i style="width:<%= page.ready %>%"></i>
@@ -457,12 +457,12 @@
 
           </li>
         <% }) %>
-  
+
     </ol>
   </section>
 
   <aside class="preview" id="preview-wrapper">
-    
+
     <iframe id="preview"  width="1600" height="600" src="<%= pages.PageList[0].file %>"  frameborder="0"></iframe>
     <footer>
       <p>Coded with ❤️ at <a href="http://riverco.de">Coderiver</a></p>
@@ -511,7 +511,7 @@
         // add innerdiv
         var inner = document.createElement("div");
         inner.style.width = "100%";
-        outer.appendChild(inner);        
+        outer.appendChild(inner);
 
         var widthWithScroll = inner.offsetWidth;
 
@@ -524,7 +524,7 @@
 
     [].forEach.call(previewButtons, function(button) {
       button.addEventListener('click', function(event) {
-      	
+
       	if(window.innerWidth < 780){return;}
         event.preventDefault();
         removeActive();
@@ -534,7 +534,7 @@
       }, false);
     });
 
-    
+
     var mode = 'wide';
     [].forEach.call(navs, function(nav) {
       nav.addEventListener('click', function(event) {
@@ -569,7 +569,7 @@
           iframe.style.transform = 'scale('+ 1 +')';
           iframe.style.height =  pheight + 'px';
 
-          
+
           return;
         }
         if(scaleH>1){scaleH = 1;}
@@ -598,7 +598,7 @@
 
     });
   </script>
-  
+
 </body>
 </html>
 
